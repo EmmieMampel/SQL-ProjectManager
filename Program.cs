@@ -61,9 +61,9 @@ namespace Datalagring_1._0
                         {
                             do
                             {
-                                WriteLine("Ange ny kategori");
+                                WriteLine("Ange ny kategori!");
                                 WriteLine("\n--------------------------------");
-                                Write("Ange namn");
+                                Write("Namn på ny kategori: ");
 
                                 var categoryName = ReadLine();
 
@@ -117,6 +117,8 @@ namespace Datalagring_1._0
 
                                     Clear();
                                     Category category = categoryList.FirstOrDefault(x => x.CategoryName == categoryName);
+
+                                    Clear();
 
                                     try
                                     {
@@ -186,6 +188,7 @@ namespace Datalagring_1._0
             } while (applicationRunning);
         }
 
+        //Metoder
         private static void SearchProduct()
         {
             Write("Ange produkt: ");
@@ -204,6 +207,8 @@ namespace Datalagring_1._0
 
                 WriteLine("\nTryck på Escape för att återgå till menyn");
                 while (ReadKey(true).Key != ConsoleKey.Escape) ;
+
+                Clear();
             }
             else
             {
