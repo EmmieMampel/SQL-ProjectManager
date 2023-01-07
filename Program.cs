@@ -67,7 +67,7 @@ namespace Datalagring_1._0
 
                                 var categoryName = ReadLine();
 
-                                WriteLine("\nStämmer detta? (J)A / (N)EJ");
+                                WriteLine("\nStämmer detta? (J)a / (N)ej");
 
                                 mainMenu = ReadKey(true);
 
@@ -78,7 +78,7 @@ namespace Datalagring_1._0
                                     var Category = new Category(categoryName);
                                     categoryList.Add(Category);
 
-                                    WriteLine("Kategori skapad");
+                                    WriteLine("Kategori skapad.");
 
                                     Thread.Sleep(2000);
 
@@ -112,7 +112,7 @@ namespace Datalagring_1._0
                                     WriteLine($"{product.ProductName}");
 
 
-                                    Write("Namn på kategori:");
+                                    Write("Namn på kategori: ");
                                     var categoryName = ReadLine();
 
                                     Clear();
@@ -123,7 +123,7 @@ namespace Datalagring_1._0
                                         if (category != null)
                                         {
                                             category.AddProduct(product);
-                                            WriteLine("Produkten är tillagd till kategorin");
+                                            WriteLine("Produkten är tillagd till kategorin.");
                                         }
                                         else
                                         {
@@ -132,13 +132,13 @@ namespace Datalagring_1._0
                                     }
                                     catch (Exception ex)
                                     {
-                                        WriteLine("Produkten finns redan i kategorin");
+                                        WriteLine("Produkten finns redan i kategorin.");
                                     }
                                     Thread.Sleep(2000);
                                 }
                                 else
                                 {
-                                    WriteLine("Produkt existerar inte");
+                                    WriteLine("Produkt existerar inte.");
                                 }
 
                                 Thread.Sleep(2000);
@@ -207,7 +207,7 @@ namespace Datalagring_1._0
             }
             else
             {
-                WriteLine("Produkten finns inte");
+                WriteLine("Produkten finns inte.");
                 Thread.Sleep(2000);
             }
         }
@@ -284,7 +284,6 @@ namespace Datalagring_1._0
             WriteLine($"Produktens namn: {product.ProductName}");
             WriteLine($"Produktens beskrivning: {product.ProductDescription}");
             WriteLine($"Produktens pris: {product.ProductPrice} Kr");
-            WriteLine("\nStämmer detta? (J)A / (N)EJ");
 
             WriteLine(" ");
             WriteLine("Är detta korrekt? (J)a (N)ej");
@@ -293,19 +292,19 @@ namespace Datalagring_1._0
 
             if (yesNo.Key == ConsoleKey.J)
             {
-                WriteLine("\nProdukten är registrerad");
+                WriteLine("\nProdukten är registrerad.");
                 AddProduct(product);
 
                 Thread.Sleep(2000);
             }
             else
             {
-                WriteLine("\nArtikelnumret är redan registrerat");
+                WriteLine("\nArtikelnumret är redan registrerat.");
             }
 
             if (yesNo.Key == ConsoleKey.N)
 
-            WriteLine("\nDu har valt att inte spara produkten, återgår till menyn");
+            WriteLine("\nDu har valt att inte spara produkten, återgår till huvudmenyn.");
 
             Thread.Sleep(2000);
         }
